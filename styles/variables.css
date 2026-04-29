@@ -1,1 +1,30 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-main: 'Inter-Variable', sans-serif;
+  --font-accent: 'Press Start 2P Regular', sans-serif;
+  --page-padding: 100px 0 100px;
+  --page-text-weight: 410;
+  --header-text-weight: 400;
+  --header-logo-text-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-title-text-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --content-padding: 100px 0 0;
+  --card-text-weight: 410;
+  --card-title-weight: 715;
+  --card-label-text-shadow: #fff;
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      rgb(0 0 0 / 0) 2px
+    ),
+  repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      rgb(0 0 0 / 0) 2px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #e7e7e7,
+      #1a1a1a
+    );
+  --container-width: clamp(375px, 50vw, 700px);
+}

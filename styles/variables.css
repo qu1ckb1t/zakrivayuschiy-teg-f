@@ -5,7 +5,7 @@
   --page-padding: 100px 0 100px;
   --page-text-weight: 410;
   --header-text-weight: 400;
-  --header-logo-text-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-logo-text-size: clamp(0.5rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --header-title-text-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --content-padding: 100px 0 0;
   --card-text-weight: 410;

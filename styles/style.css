@@ -17,10 +17,8 @@
   font-variation-settings: "wght" var(--page-text-weight);
   background-image: var(--background-gradient);
   background-attachment: fixed;
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;  
-  padding: var(--page-padding); 
+  padding: var(--page-padding);
 }
 
 .header {
@@ -34,7 +32,7 @@
   background: #fff;
   border: 2px solid #000;
   font-family: var(--font-accent);
-  padding: clamp(122px, 5vh, 130px) clamp(16px, 5vw, 122px);
+  padding: clamp(122px, 5vh, 130px) clamp(16px, 3vw, 122px);
 }
 
 .header__logo {
@@ -56,7 +54,8 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
-  justify-content: center;  
+  justify-content: center;
+  align-items: center;
   width: var(--container-width);
   gap: 52px;
   padding: var(--content-padding);  
@@ -83,7 +82,7 @@
 .content__card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;  
+  object-fit: cover;
 }
 
 .content__card-label {
@@ -164,17 +163,17 @@
 .button__save {
   display: flex;
   align-self: center;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 306px;
-  height: 84px;
+  max-height: 55px;
+  padding: 20.5px 20px;
 }
 
 .button__save .floppy-icon {
-  width: 28px;
-  height: 28px;
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
 }
 
 .dialog__save[open] {
@@ -183,8 +182,7 @@
   align-items: center;
   justify-items: center;
   gap: 30px;
-  padding: 30px 40px;
-  min-width: 341px;
+  padding: 30px 30px;
   max-width: 353px;
 }
 
@@ -220,4 +218,33 @@
   max-width: 293px;
   min-height: 38px;  
   text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .button__save {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.20vh;
+    padding: 2.6vh 5.4vw;
+    max-height: 84px;
+  }
+
+  .button__save .floppy-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog__save[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 4.5vh;
+    padding: 4.5vh 10.7vw;
+    min-width: 91vw;
+  }
 }

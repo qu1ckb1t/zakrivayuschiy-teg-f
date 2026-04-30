@@ -142,6 +142,7 @@
 .card__buttons {
   display: flex;
   justify-content: end;
+  align-content: center;
   gap: 12px;
 }
 
@@ -151,8 +152,8 @@
 }
 
 .card__icon-button .like-icon {
-  width: 27px;
-  height: 24px;
+  width: 39px;
+  height: 38px;
 }
 
 .card__like-button {
@@ -174,4 +175,49 @@
 .button__save .floppy-icon {
   width: 28px;
   height: 28px;
+}
+
+.dialog__save[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+  padding: 30px 40px;
+  min-width: 341px;
+  max-width: 353px;
+}
+
+.dialog__save[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__save[open] .dialog__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__save .floppy-icon {
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;  
+}
+
+.dialog__save .dialog__title {
+  font-family: var(--font-accent);
+  font-weight: var(--header-text-weight);
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.dialog__save .dialog__button {
+  width: 100%;
+  min-width: 261px;
+  max-width: 293px;
+  min-height: 38px;  
+  text-transform: uppercase;
 }

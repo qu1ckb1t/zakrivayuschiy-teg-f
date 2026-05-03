@@ -128,7 +128,15 @@
   letter-spacing: 0%;
 }
 
+.button__text {
+  position: relative;
+  z-index: 999;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
 .button_common {
+  position: relative;
   background: #fff;
   border: 2px solid #000;
   font-family: var(--font-accent);
@@ -136,6 +144,29 @@
   font-size: 14px;
   line-height: 90%;
   letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.button_common:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.button_common::before {
+  content: '';
+  position: absolute;
+  transform: scale(0, 1);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transition: 0.5s ease-in-out;
+  background: #000;
+}
+
+.button_common:hover::before {
+  transform: scale(1);
 }
 
 .card__buttons {
@@ -146,18 +177,29 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-content: center;
   background: none;
-  border: none;
+  border: 2px solid rgb(0 0 0 / 0);
+  padding: 0;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
 }
 
 .card__icon-button .like-icon {
-  width: 39px;
+  width: 38px;
   height: 38px;
 }
 
 .card__like-button {
-  width: 130px;
-  height: 38px;
+  padding: 12.5px 37px;
 }
 
 .button__save {
@@ -174,6 +216,8 @@
   flex-shrink: 0;
   width: 21px;
   height: 21px;
+  background: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .dialog__save[open] {
@@ -220,6 +264,34 @@
   text-transform: uppercase;
 }
 
+.img_contrast {
+  filter: grayscale(65%);
+}
+
+.img_saturate {
+  filter: saturate(300%);
+}
+
+.img_hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.img_invert {
+  filter: invert(1);
+}
+
+.img_sepia {
+  filter: sepia(80%);
+}
+
+.img_blur {
+  filter: blur(1rem);
+}
+
+.img_mixed {
+  filter: hue-rotate(90deg) contrast(2) sepia(0.5) brightness(1.5);
+}
+
 @media (width <= 375px) {
   .button__save {
     display: flex;
@@ -247,32 +319,4 @@
     padding: 4.5vh 10.7vw;
     min-width: 91vw;
   }
-}
-
-.img_contrast {
-  filter: grayscale(65%);
-}
-
-.img_saturate {
-  filter: saturate(300%);
-}
-
-.img_hue-rotate {
-  filter: hue-rotate(30deg);
-}
-
-.img_invert {
-  filter: invert(1);
-}
-
-.img_sepia {
-  filter: sepia(80%);
-}
-
-.img_blur {
-  filter: blur(1rem);
-}
-
-.img_mixed {
-  filter: hue-rotate(90deg) contrast(2) sepia(0.5) brightness(1.5);
 }

@@ -27,4 +27,5 @@
       #1a1a1a
     );
   --container-width: clamp(375px, 50vw, 700px);
+  --button-text-color: #fff;
 }

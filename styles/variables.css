@@ -28,4 +28,6 @@
     );
   --container-width: clamp(375px, 50vw, 700px);
   --button-text-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #f00;
 }

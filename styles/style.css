@@ -183,6 +183,7 @@
   border: 2px solid rgb(0 0 0 / 0);
   padding: 0;
   transition: border 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -199,7 +200,8 @@
 }
 
 .card__like-button {
-  padding: 12.5px 37px;
+  width: 130px;
+  height: 38px;
 }
 
 .button__save {
@@ -319,4 +321,21 @@
     padding: 4.5vh 10.7vw;
     min-width: 91vw;
   }
+}
+
+#like-heart .contour {
+  fill: var(--contour-color);
+}
+
+#like-heart .sparks {
+  fill: var(--animation-fill-color);
+  opacity: 0;
+}
+
+#like-heart .core {
+  fill: transparent;
+}
+
+#like-heart .main-body {
+  fill: transparent;
 }

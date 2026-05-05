@@ -28,11 +28,10 @@
   justify-content: center;
   gap: 20px;
   width: var(--container-width);
-  min-height: 327px;
   background: #fff;
   border: 2px solid #000;
   font-family: var(--font-accent);
-  padding: clamp(122px, 5vh, 130px) clamp(16px, 3vw, 122px);
+  padding: clamp(122px, calc(119.183px + 0.751vw), 130px) clamp(16px, calc(-21.324px + 9.953vw), 122px);
 }
 
 .header__logo {

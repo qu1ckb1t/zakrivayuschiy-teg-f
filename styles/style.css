@@ -220,7 +220,7 @@
   flex-shrink: 0;
   width: 21px;
   height: 21px;
-  background: var(--button-text-color);
+  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 

@@ -71,16 +71,19 @@
   font-weight: var(--card-title-weight);
   font-variation-settings: "wght" var(--card-title-weight);
   font-size: 18px;
-  line-height: 100%;
+  line-height: 109%;
   letter-spacing: 0;
-  padding: 4px 10px;
+  padding: 3px 10px;
 }
 
 .content__card-image_container {
   position: relative;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .content__card-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -176,7 +179,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 7px;
 }
 
 .card__icon-button {
@@ -234,8 +237,10 @@
   align-items: center;
   justify-items: center;
   gap: 30px;
-  padding: 30px 30px;
-  max-width: 353px;
+  padding: 28px;
+  width: 353px;
+  height: 191px;
+  border: 2px solid #000;
 }
 
 .dialog__save[open]::backdrop {
@@ -255,7 +260,7 @@
   height: 39px;
 }
 
-.dialog__save .dialog__title {
+.dialog__save .dialog__text {
   font-family: var(--font-accent);
   font-weight: var(--header-text-weight);
   font-size: 14px;
@@ -265,10 +270,8 @@
 }
 
 .dialog__save .dialog__button {
-  width: 100%;
-  min-width: 261px;
-  max-width: 293px;
-  min-height: 38px;
+  width: 293px;
+  height: 38px;
   text-transform: uppercase;
 }
 
@@ -294,6 +297,7 @@
 
 .img_blur {
   filter: blur(1rem);
+  padding: 12px;
 }
 
 .img_mixed {
@@ -302,30 +306,28 @@
 
 @media (width <= 375px) {
   .button__save {
-    display: flex;
     flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2vh;
-    padding: 2.6vh 5.4vw;
-    max-height: 84px;
+    gap: 8px;
+    padding: 15px 20px;
+    min-width: 306px;
+    min-height: 84px;
   }
 
   .button__save .floppy-icon {
-    flex-shrink: 0;
     width: 28px;
     height: 28px;
   }
 
   .dialog__save[open] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    gap: 4.5vh;
-    padding: 4.5vh 10.7vw;
-    min-width: 91vw;
+    gap: 30px;
+    padding: 28px 37px;
+    max-width: 338px;
+    max-height: 191px;
+  }
+
+  .dialog__save[open] .dialog__button {
+    width: 261px;
+    height: 38px;
   }
 }
 
@@ -356,6 +358,16 @@
 
 .like-icon:hover .main-body {
   fill: #000;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
   transition: fill 0.3s linear 0.05s;
 }
 

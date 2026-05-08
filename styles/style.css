@@ -238,8 +238,7 @@
   justify-items: center;
   gap: 30px;
   padding: 28px;
-  width: 353px;
-  height: 191px;
+  max-width: 353px;
   border: 2px solid #000;
 }
 
@@ -320,9 +319,7 @@
 
   .dialog__save[open] {
     gap: 30px;
-    padding: 28px 37px;
-    max-width: 338px;
-    max-height: 191px;
+    padding: 30px 35px;
   }
 
   .dialog__save[open] .dialog__button {
